@@ -25,8 +25,6 @@ function inputCmd(event){
     if(event.keyCode == 13){
         let input_cmd = document.getElementById('input'+cmd_no).value.toLowerCase();
         let cmd = input_cmd.split(' ');
-        console.log(cmd[0]);
-
 
         // for listing files
         if(cmd == 'ls'){
