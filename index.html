@@ -1,1 +1,32 @@
-<h1>Avik Pradhan</h1>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="name-div">
+            <h1 class="primary-text">Avik Pradhan</h1>
+        </div>
+
+        <div class="portfolio-text">
+            <p>Hello !!</p>
+            <p>I'm Fullstack developer. Vue + Laravel. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
+        </div>
+        <div class="instructions">
+            <p> Enter `ls` to view existing files. </p>
+            <p> Enter `cat file_name` to view file contents. </p>
+            <p> Enter `clear` to clear screen. </p>
+        </div>
+        <div id="main">
+            <div class="command-div">
+                <div class="command-line">
+                    <p class="primary-text">visitor@desktop:<span class="secondary-text">~</span>$</p>
+                </div>
+                <div class="input-div">
+                    <input type="text" class="input-field" onblur="this.focus()" autofocus id="input1" onkeypress="inputCmd(event)">
+                    <div id="output1"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>

@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Anonymous Pro',monospace;
+}
+
+input{
+    width: 100%;
+}
+
+h1{
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.primary-text{
+    color: #0f0;
+}
+
+.secondary-text{
+    color: red;
+}
+
+.instructions{
+    margin: 2em auto;
+}
+
+.input-field{
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 1em;
+    font-family: 'Anonymous Pro',monospace;
+    outline: none;
+}
+
+
+.list-div {
+    display: flex;
+}
+
+.list-div p{
+    margin-right: 4em;
+}
+
+.title-text{
+    color: yellow;
+}
+
+.name-div{
+    margin-top: 2em;
+}
