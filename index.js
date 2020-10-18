@@ -31,10 +31,9 @@ function inputCmd(event){
             let div = document.createElement('div');
             div.className = 'list-div';
             div.innerHTML = `
-                <p>about_me.txt</p>
-                <p>experience.txt</p>
-                <p>works.txt</p>
                 <p>skills.txt</p>
+                <p>portfolio.txt</p>
+                <p>about_me.txt</p>
             `;
             document.getElementById('output'+cmd_no).appendChild(div);
         }        
@@ -50,26 +49,57 @@ function inputCmd(event){
                 `;
                 document.getElementById('output'+cmd_no).appendChild(div);
             }
-            if(cmd[1] == 'experience.txt'){
+            if(cmd[1] == 'portfolio.txt'){
                 let div = document.createElement('div');
-                div.className = 'experience-div';
+                div.className = 'portfolio-div';
                 div.innerHTML = `
-                    <h3 class="title-text"> My Experience: </h3>
-                    <p> Date(from-to) - Junior Developer at Silicon Hire </p>
-                    <p> Date(from-to) - Junior Developer at Vzeal </p>
-                    <p> Date(from-to) - Trainee Developer at Vzeal </p>
-                    <p> Date(from-to) - Intern at Vzeal </p>
-                `;
-                document.getElementById('output'+cmd_no).appendChild(div);
-            }
-            if(cmd[1] == 'works.txt'){
-                let div = document.createElement('div');
-                div.className = 'works-div';
-                div.innerHTML = `
-                    <h3 class="title-text"> My works: </h3>
-                    <p> Frontend using Vue Js + Bootstrap in Buyraksi.com </p>
-                    <p> Backend using Laravel in Buyraksi.com </p>
-                    <p> Frontend using Vue Js + SCSS in Meroadda.com </p>
+                    <h3 class="title-text"> My Portfolio: </h3>
+                    <table>
+                        <tr>
+                            <td>
+                                <p>Currently</p>
+                            </td>
+                            <td>
+                                <p>Working as junior developer at SiliconHire.</p>
+                                <p>Responsible for creating REST Apis using Django Restframework.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2019-11-1</p>
+                                <p>to</p>
+                                <p>2020-7-16</p>
+                            </td>
+                            <td>
+                                <p>Worked as junior developer in Vzeal.</p>
+                                <p>Created REST APIs for mobile app and front end for buyraksi.com.</p>
+                                <p>Created front end using HTML, SCSS, VueJs for meroadda.com</p>
+                                <p>Implemented TDD approach.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2019-04-01</p>
+                                <p>to</p>
+                                <p>2019-10-31</p>
+                            </td>
+                            <td>
+                                <p>Worked as trainee developer in Vzeal.</p>
+                                <p>Created a CMS using Laravel for backend and Vue JS , Bootstrap for frontend.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>2019-01-01</p>
+                                <p>to</p>
+                                <p>2019-03-30</p>
+                                
+                            </td>
+                            <td>
+                                <p>Worked as intern in vzeal</p>
+                            </td>
+                        </tr>
+                    </table>
                 `;
                 document.getElementById('output'+cmd_no).appendChild(div);
             }
@@ -78,19 +108,38 @@ function inputCmd(event){
                 div.className = 'skills-div';
                 div.innerHTML = `
                     <h3 class="title-text"> My Skills: </h3>
-                    <p> HTML <p>
-                    <p> CSS <p>
-                    <p> SCSS <p>
-                    <p> Javascript <p>
-                    <p> VueJs <p>
-                    <p> PHP <p>
-                    <p> Laravel <p>
-                    <p> Python </p>
-                    <p> Django </p>
+                    <div class="skills">
+                        <div>
+                            <h4>Front End</h4>
+                            <p>HTML5</p>
+                            <p>CSS</p>
+                            <p>Javascript</p>
+                            <p>Vue JS</p>
+                            <p>Vuex</p>
+                            <p>SCSS</p>
+                            <p>Jquery</p>
+                            <p>Bootstrap</p>
+                        </div>
+                        <div>
+                            <h4>Back End</h4>
+                            <p>PHP</p>
+                            <p>Python</p>
+                            <p>Laravel</p>
+                            <p>Django</p>
+                            <p>MySQL</p>
+                            <p>PostgreSQL</p>
+                        </div>
+                        <div>
+                            <h4>Tools</h4>
+                            <p>Git</p>
+                            <p>REST APIs</p>
+                            <p>npm</p>
+                        </div>
+                    </div>
                 `;
                 document.getElementById('output'+cmd_no).appendChild(div);
             }
-            if(cmd[1] != 'skills.txt' && cmd[1] != 'about_me.txt' && cmd[1] != 'experience.txt' && cmd[1] != 'works.txt'){
+            if(cmd[1] != 'skills.txt' && cmd[1] != 'about_me.txt' && cmd[1] != 'portfolio.txt'){
                 let div = document.createElement('div');
                 div.className = 'list-div';
                 div.innerHTML = `

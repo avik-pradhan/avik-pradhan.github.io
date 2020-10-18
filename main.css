@@ -25,6 +25,12 @@ h1{
     margin: 2em auto;
 }
 
+.instructions p{
+    letter-spacing: 2px;
+    line-height: 1.3em;
+    margin: 0;
+}
+
 .input-field{
     background-color: black;
     border: none;
@@ -50,4 +56,42 @@ h1{
 
 .name-div{
     margin-top: 2em;
+}
+
+table{
+    width: 100%;
+}
+
+table td{
+    vertical-align: top;
+    border-bottom: 2px dashed white;
+    padding: 1em 0;
+}
+
+table tr{
+    margin-bottom: 1em;
+}
+
+table td:first-child{
+    border-right: 2px dashed white;
+    text-align: center;
+}
+
+table p{
+    margin: 4px 1em;
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skills > div{
+    margin-right: 3em;
+}
+
+.skills h4{
+    margin: 0;
+    color: cyan;
 }
