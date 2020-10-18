@@ -178,8 +178,9 @@ function inputCmd(event){
             `;
             document.getElementById('output'+cmd_no).appendChild(div);
         }
-
-        add_div();
+        if(cmd != 'clear'){
+            add_div();
+        }
     }
     
 }
