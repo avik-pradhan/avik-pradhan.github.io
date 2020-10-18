@@ -15,7 +15,7 @@
 
         <link rel="stylesheet" href="main.css">
     </head>
-    <body>
+    <body onload="load()">
         <div class="name-div">
             <h1 class="primary-text">Avik Pradhan</h1>
         </div>
@@ -24,6 +24,10 @@
             <p>Hello, I'm a Fullstack developer. Welcome to my portfolio.</p>
         </div>
         <div class="instructions">
+            <!-- <p>Available Commands:</p>
+            <p>ls - list existing files.</p>
+            <p>cat file_name - view file content.</p>
+            <p>clear - clear screen.</p> -->
             <p> Enter `ls` to list existing files. </p>
             <p> Enter `cat file_name` to view file contents. </p>
             <p> Enter `clear` to clear screen. </p>
@@ -31,10 +35,19 @@
         <div id="main">
             <div class="command-div">
                 <div class="command-line">
-                    <p class="primary-text">visitor@desktop:<span class="secondary-text">~</span>$</p>
+                    <p class="primary-text">guest@avik:<span class="secondary-text">~</span>$</p>
+                    <p id="animate"></p>
+                </div>
+                <div class="input-div delay">
+                    <p>About me About me About me Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex </p>
+                </div>
+            </div>
+            <div class="command-div delay">
+                <div class="command-line">
+                    <p class="primary-text">guest@avik:<span class="secondary-text">~</span>$</p>
+                    <input type="text" class="input-field" onblur="this.focus()" autofocus id="input1" onkeypress="inputCmd(event)">
                 </div>
                 <div class="input-div">
-                    <input type="text" class="input-field" onblur="this.focus()" autofocus id="input1" onkeypress="inputCmd(event)">
                     <div id="output1"></div>
                 </div>
             </div>

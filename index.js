@@ -9,10 +9,10 @@ function add_div() {
     div.className = 'command-div';
     div.innerHTML = `
     <div class="command-line">
-        <p class="primary-text">visitor@desktop:<span class="secondary-text">~</span>$</p>
+        <p class="primary-text">guest@avik:<span class="secondary-text">~</span>$</p>
+        <input type="text" class="input-field" onblur="this.focus()" autofocus id="input${cmd_no}" onkeypress="inputCmd(event)">
     </div>
         <div class="input-div">
-            <input type="text" class="input-field" onblur="this.focus()" autofocus id="input${cmd_no}" onkeypress="inputCmd(event)">
         <div id="output${cmd_no}"></div>
     </div>
     `;
@@ -159,10 +159,10 @@ function inputCmd(event){
             div.className = 'command-div';
             div.innerHTML = `
             <div class="command-line">
-                <p class="primary-text">visitor@desktop:<span class="secondary-text">~</span>$</p>
+                <p class="primary-text">guest@avik:<span class="secondary-text">~</span>$</p>
+                <input type="text" class="input-field" onblur="this.focus()" autofocus id="input${cmd_no}" onkeypress="inputCmd(event)">
             </div>
-                <div class="input-div">
-                    <input type="text" class="input-field" onblur="this.focus()" autofocus id="input${cmd_no}" onkeypress="inputCmd(event)">
+            <div class="input-div">
                 <div id="output${cmd_no}"></div>
             </div>
             `;
@@ -183,4 +183,30 @@ function inputCmd(event){
         }
     }
     
+}
+
+var animate_no = 0;
+
+function display(){
+    let elements = document.getElementsByClassName('delay');
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.display = 'block';
+    }
+    document.getElementById('input'+cmd_no).focus();
+}
+
+function typeWriter(){
+    let txt = 'cat about_me.txt';
+    if(animate_no < txt.length){
+        document.getElementById('animate').innerHTML += txt.charAt(animate_no);
+        animate_no++;
+        setTimeout(typeWriter, 90);
+    }
+    if(animate_no == txt.length){
+        setTimeout(display, 500);
+    }
+}
+
+function load(){
+    setTimeout(typeWriter, 1000);
 }
